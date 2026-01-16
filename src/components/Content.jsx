@@ -16,13 +16,6 @@ function Content() {
       id="services"
       className="relative py-20 px-4 md:px-8 max-w-7xl mx-auto"
     >
-      <div className="text-center mb-16 relative z-10">
-        <h2 className="text-3xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-400 mb-4 inline-block">
-          خدماتنا ومجالاتنا
-        </h2>
-        <div className="w-24 h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent mx-auto rounded-full opacity-70"></div>
-      </div>
-
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative z-10">
         {items.map((item, index) => (
           <GlassBox
@@ -30,9 +23,6 @@ function Content() {
             className="p-8 hover:bg-white/5 transition-all duration-300 group cursor-pointer hover:-translate-y-2"
           >
             <div className="flex flex-col items-center text-center">
-              <div className="w-16 h-16 mb-6 rounded-full bg-slate-800/50 flex items-center justify-center border border-white/10 shadow-inner group-hover:scale-110 transition-transform duration-300">
-                <span className="text-2xl text-cyan-300">✦</span>
-              </div>
               <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-cyan-300 transition-colors">
                 {item.title}
               </h3>
