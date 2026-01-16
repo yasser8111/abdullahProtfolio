@@ -9,7 +9,7 @@ import Content from "./components/Content";
 
 function App() {
   return (
-    <div className="bg-black min-h-screen text-slate-200 relative overflow-x-hidden">
+    <div className="min-h-screen relative overflow-x-hidden">
       <Navbar />
       <main>
         <Hero />

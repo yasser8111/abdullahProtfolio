@@ -16,7 +16,7 @@ function Grids({ side = "left" }) {
         }`}
         alt=""
       />
-      <div className="w-250 h-250 bg-[#EE5A2A] rounded-full blur-[120px] opacity-50"></div>
+      <div className="w-250 h-250 bg-primary rounded-full blur-[120px] opacity-50"></div>
     </div>
   );
 }
