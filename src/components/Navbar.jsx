@@ -21,30 +21,24 @@ const Navbar = () => {
 
   return (
     <nav className="fixed w-full z-50 top-6 flex justify-center pointer-events-none">
-      <div 
-        className={`transition-all duration-500 ease-in-out transform pointer-events-auto ${
-          isScrolled ? "scale-100 opacity-100" : "scale-105 opacity-90"
-        }`}
-      >
-        {isScrolled ? (
-          <GlassBox>
-            <div className="flex items-center justify-center space-x-10 px-10 h-12 min-w-max">
-              {links.map((link) => (
-                <a key={link.name} href={link.href} className="text-white text-sm font-medium hover:opacity-70 transition-opacity">
-                  {link.name}
-                </a>
-              ))}
-            </div>
-          </GlassBox>
-        ) : (
-          <div className="flex items-center justify-center space-x-10 h-12 min-w-max">
+      <div className="pointer-events-auto transition-transform duration-500 ease-in-out">
+        <GlassBox>
+          <div
+            className={`flex items-center justify-center px-10 h-12 min-w-max transition-all duration-500 ease-in-out ${
+              isScrolled ? "gap-6 scale-90" : "gap-12 scale-100"
+            }`}
+          >
             {links.map((link) => (
-              <a key={link.name} href={link.href} className="text-white text-sm font-medium hover:opacity-70 transition-opacity">
+              <a
+                key={link.name}
+                href={link.href}
+                className="text-white text-sm font-medium hover:opacity-70 transition-opacity"
+              >
                 {link.name}
               </a>
             ))}
           </div>
-        )}
+        </GlassBox>
       </div>
     </nav>
   );

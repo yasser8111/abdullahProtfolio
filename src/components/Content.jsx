@@ -3,38 +3,53 @@ import GlassBox from "./GlassBox";
 
 function Content() {
   const items = [
-    { title: "المقدمة", desc: "نبذة تعريفية ومختصرة" },
-    { title: "عن الشركة", desc: "تاريخنا ورؤيتنا للمستقبل" },
-    { title: "الخدمات", desc: "ما نقدمه لعملائنا من جودة" },
-    { title: "المشاريع", desc: "سابقة أعمالنا وإنجازاتنا" },
-    { title: "الفريق", desc: "نخبة من الخبراء والمبدعين" },
-    { title: "اتصل بنا", desc: "تواصل معنا لبدء النجاح" },
+    {
+      title: "Introduction",
+      desc: "The beginning of our journey toward digital excellence.",
+    },
+    { title: "About Us", desc: "Our vision and values that drive us forward." },
+    {
+      title: "Services",
+      desc: "Innovative solutions designed for your business growth.",
+    },
+    {
+      title: "Projects",
+      desc: "A showcase of our most prominent past achievements.",
+    },
+    {
+      title: "Team",
+      desc: "Creative experts working with passion for your success.",
+    },
+    { title: "Contact Us", desc: "We are here to answer all your inquiries." },
   ];
 
   return (
-    <section
-      id="services"
-      className="relative py-20 px-4 md:px-8 max-w-7xl mx-auto"
-    >
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative z-10">
+    <section id="services" className="relative py-20 max-w-7xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 relative z-10">
         {items.map((item, index) => (
           <GlassBox
             key={index}
-            className="p-8 hover:bg-white/5 transition-all duration-300 group cursor-pointer hover:-translate-y-2"
+            className="p-10 hover:bg-white/10 transition-all duration-500 group cursor-pointer overflow-hidden relative"
           >
-            <div className="flex flex-col items-center text-center">
-              <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-cyan-300 transition-colors">
+            <div className="flex flex-col items-start text-left relative z-10">
+              <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-300 transition-colors">
                 {item.title}
               </h3>
-              <p className="text-slate-400">{item.desc}</p>
+
+              <p className="text-gray-400 text-sm leading-relaxed group-hover:text-gray-300">
+                {item.desc}
+              </p>
             </div>
+
+            <span className="absolute -bottom-12 -right-6 text-9xl font-black text-white/[0.03] group-hover:text-white/[0.07] transition-colors select-none">
+              {index + 1}
+            </span>
           </GlassBox>
         ))}
       </div>
 
-      {/* Background decorative elements */}
-      <div className="absolute top-1/2 left-1/4 w-96 h-96 bg-cyan-500 rounded-full blur-[100px] pointer-events-none"></div>
-      <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-purple-500 rounded-full blur-[80px] pointer-events-none"></div>
+      <div className="absolute top-0 -left-20 w-96 h-96 bg-primary/10 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-0 -right-20 w-96 h-96 bg-accent/30 rounded-full blur-[120px] pointer-events-none" />
     </section>
   );
 }
