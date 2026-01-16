@@ -5,9 +5,9 @@ function Content() {
   const items = [
     {
       title: "Introduction",
-      desc: "The beginning of our journey toward digital excellence.",
+      desc: "The beginning of my journey toward digital excellence.",
     },
-    { title: "About Us", desc: "Our vision and values that drive us forward." },
+    { title: "About Me", desc: "My vision and values that drive me forward." },
     {
       title: "Services",
       desc: "Innovative solutions designed for your business growth.",
