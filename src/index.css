@@ -22,4 +22,13 @@
 body {
   background-color: var(--color-main-bg);
   color: white;
+  color: transparent;
+}
+
+*::-webkit-scrollbar{
+  background: transparent;
+}
+*::-webkit-scrollbar-corner{
+  background: #000;
+  color: #fff;
 }

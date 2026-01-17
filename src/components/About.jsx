@@ -1,44 +1,36 @@
 import React from "react";
 import GlassBox from "./GlassBox";
+import Grids from "./grids";
 
 const About = () => {
   return (
     <section
       id="about"
-      className="relative py-24 min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative py-24 min-h-screen flex items-center justify-center "
     >
-      {/* Decorative Background Elements */}
-      <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
-        <div className="absolute top-[10%] -left-[10%] w-[500px] h-[500px] bg-primary/10 rounded-full blur-[120px] animate-pulse"></div>
-        <div className="absolute bottom-[10%] -right-[10%] w-[400px] h-[400px] bg-accent/10 rounded-full blur-[100px]"></div>
-      </div>
+      <Grids side="right" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Left Side: Visual/Image Placeholder */}
           <div className="relative group">
-            <div className="absolute -inset-4 bg-gradient-to-r from-primary to-accent rounded-3xl blur opacity-20 group-hover:opacity-40 transition duration-1000 group-hover:duration-200"></div>
-            <GlassBox className="aspect-square w-full max-w-md mx-auto overflow-hidden border-white/20 p-2">
-              <div className="w-full h-full bg-slate-900 rounded-xl flex items-center justify-center relative overflow-hidden group">
-                {/* Abstract Visual Placeholder */}
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-accent/20"></div>
-                <div className="text-8xl filter grayscale group-hover:grayscale-0 transition-all duration-700 opacity-50 group-hover:opacity-100 scale-90 group-hover:scale-100">
-                  👤
-                </div>
-                <div className="absolute bottom-6 left-6 right-6 p-4 glass-border rounded-lg bg-black/40 backdrop-blur-sm transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
-                  <p className="text-sm font-medium text-white text-center">
-                    Software Engineer & UI/UX Expert
-                  </p>
-                </div>
-              </div>
-            </GlassBox>
+            <GlassBox className="aspect-square w-full max-w-md mx-auto overflow-hidden border-white/20 p-2"></GlassBox>
 
             {/* Floating Experience Badge */}
             <div className="absolute -bottom-6 -right-6 md:right-0 lg:-right-6">
               <GlassBox className="px-6 py-4 border-primary/50 bg-primary/5">
                 <span className="block text-3xl font-bold text-white">5+</span>
-                <span className="text-xs text-primary font-bold uppercase tracking-wider">
+                <span className="text-xs text-accent font-bold uppercase tracking-wider">
                   Years Experience
+                </span>
+              </GlassBox>
+            </div>
+
+            <div className="absolute top-20 -left-6 md:left-0 lg:-left-6">
+              <GlassBox className="px-6 py-4 border-primary/50 bg-primary/5">
+                <span className="block text-3xl font-bold text-white">50+</span>
+                <span className="text-xs text-accent font-bold uppercase tracking-wider">
+                  Projects Completed
                 </span>
               </GlassBox>
             </div>
@@ -46,14 +38,7 @@ const About = () => {
 
           {/* Right Side: Content */}
           <div className="space-y-8">
-            <div className="space-y-4">
-              <h2 className="text-5xl md:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-slate-500">
-                About Me
-              </h2>
-              <div className="w-20 h-1.5 bg-primary rounded-full"></div>
-            </div>
-
-            <p className="text-xl text-slate-300 leading-relaxed max-w-2xl italic">
+            <p className="text-xl text-slate-300 leading-relaxed max-w-2xl ">
               "Focusing on crafting seamless digital experiences that combine
               innovative code with stunning visual design."
             </p>
@@ -73,24 +58,8 @@ const About = () => {
               </p>
             </div>
 
-            {/* Stats Grid */}
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-6 pt-4">
-              <div className="space-y-1">
-                <p className="text-3xl font-bold text-white">50+</p>
-                <p className="text-sm text-slate-500">Projects Finished</p>
-              </div>
-              <div className="space-y-1">
-                <p className="text-3xl font-bold text-white">20+</p>
-                <p className="text-sm text-slate-500">Happy Clients</p>
-              </div>
-              <div className="space-y-1">
-                <p className="text-3xl font-bold text-white">10+</p>
-                <p className="text-sm text-slate-500">Tech Stacks</p>
-              </div>
-            </div>
-
             <div className="pt-8">
-              <button className="relative group p-px font-semibold rounded-full bg-gradient-to-r from-primary to-accent transition-all hover:shadow-[0_0_20px_rgba(105,201,243,0.4)]">
+              <button className="cursor-pointer relative group p-px font-semibold rounded-full bg-gradient-to-r from-primary to-accent transition-all hover:shadow-[0_0_20px_rgba(105,201,243,0.4)]">
                 <div className="px-10 py-4 bg-slate-950 rounded-full group-hover:bg-transparent transition-all duration-300">
                   <span className="text-white group-hover:text-black transition-colors">
                     Download Résumé
