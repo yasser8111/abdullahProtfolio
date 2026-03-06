@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --color-white: #fff;
+  --color-black-100: #f5f5f5;
+  --color-black-200: #e5e5e5;
+  --color-black-300: #d4d4d4;
+  --color-black-400: #a3a3a3;
+  --color-black-500: #737373;
+  --color-black-600: #525252;
+  --color-black-700: #404040;
+  --color-black-800: #262626;
+  --color-black-900: #171717;
+  --color-black: #000;
+}
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: "Clash Grotesk", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Modern way (Firefox) */
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-black) transparent;
+  }
+
+  /* Webkit browsers (Chrome, Edge, Safari) */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--color-black);
+    border-radius: 20px;
+    border: 2px solid transparent;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: var(--color-black-500);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    scroll-padding-top: 72px;
+  }
+
+  section {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+}
