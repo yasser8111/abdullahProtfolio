@@ -12,7 +12,7 @@ const Bio = () => {
         {siteData.bioSection.heading}
       </h2>
 
-      <div className="flex-1 flex flex-col justify-center snap-center">
+      <div className="flex-1 flex flex-col justify-center snap-center mt-5">
         <div className="flex flex-col lg:flex-row lg:gap-10 max-w-7xl mx-auto items-center">
           <div className="w-full lg:w-1/2 h-100 rounded-3xl bg-black-100"></div>
           <div className="w-full lg:w-1/2 flex flex-col gap-4 mt-5">
@@ -24,15 +24,15 @@ const Bio = () => {
               {siteData.bioSection.bio}
             </p>
 
-            <div className="flex gap-3 sm:gap-4 justify-end lg:justify-start">
-              <Button 
+            <div className="flex flex-col sm:flex-row gap-4 justify-end lg:justify-start">
+              <Button
                 variant="black"
                 href="#"
                 icon={<i className="fa-solid fa-download text-xl"></i>}
               >
                 {siteData.bioSection.buttons.resume}
               </Button>
-              <Button 
+              <Button
                 variant="outline"
                 to="/about"
                 icon={<i className="fa-regular fa-user text-xl"></i>}

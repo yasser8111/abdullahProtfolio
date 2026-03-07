@@ -24,8 +24,8 @@ const ProjectCard = ({ project }) => {
             </Badge>
           ))}
           {project.technologies?.length > 3 && (
-            <span className="text-md sm:text-lg md:text-xl text-black-300 whitespace-nowrap px-0 lg:px-3">
-              more...
+            <span className="text-xl text-black-300 whitespace-nowrap px-0 lg:px-3">
+              +{project.technologies.length - 3}
             </span>
           )}
         </div>
@@ -44,7 +44,7 @@ const Project = () => {
         /Works
       </h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10 mt-5 sm:mt-10">
         {projects.map((project) => (
           <ProjectCard key={project.id} project={project} />
         ))}
