@@ -21,24 +21,26 @@ const ProjectDetails = () => {
     <div className="bg-white text-gray-900 min-h-screen">
       <Navbar />
 
-      <main className="pt-32 pb-16">
-        <div className="container mx-auto px-8">
+      <main className="mt-18">
+        <div className="container min-h-[calc(100dvh-72px)] mx-auto p-4 md:p-6 lg:p-8 flex flex-col justify-between">
           <Link
             to="/"
-            className="inline-flex items-center gap-2 text-2xl font-medium text-black-600 hover:text-black mb-10 transition-colors snap"
+            className="inline-flex items-center gap-2 text-xl lg:text-2xl font-medium text-black-600 hover:text-black mb-4 lg:mb-10 transition-colors snap"
           >
-            <i className="fa-solid fa-arrow-left "></i>
+            <i className="fa-solid fa-arrow-left"></i>
             Back to Home
           </Link>
 
-          <div className="mb-12">
-            <h1 className="text-6xl md:text-8xl font-semibold mb-4">
+          <div className="mb-4 md:mb-6 lg:mb-12">
+            <h1 className="text-3xl sm:text-6xl md:text-8xl font-semibold mb-4">
               {project.title}
             </h1>
-            <p className="text-3xl text-black-500">/{project.category}</p>
+            <p className="text-xl md:text-2xl lg:text-3xl text-black-500">
+              /{project.category}
+            </p>
           </div>
 
-          <div className="w-full h-[50vh] md:h-[70vh] rounded-[30px] overflow-hidden mb-16 bg-black-100 snap">
+          <div className="w-full h-[50vh] md:h-[70vh] rounded-[30px] overflow-hidden mb-4 md:mb-8 lg:mb-16 bg-black-100 snap">
             <img
               src={project.image}
               alt={project.title}
@@ -46,17 +48,21 @@ const ProjectDetails = () => {
             />
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 snap snap-center">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 snap snap-center">
             <div className="md:col-span-2">
-              <h2 className="text-4xl font-medium mb-6">/Description</h2>
-              <p className="text-2xl text-black-600 leading-relaxed font-light">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-medium mb-3 lg:mb-6">
+                /Description
+              </h2>
+              <p className="text-md :mdtext-xl lg:text-2xl text-black-600 font-light">
                 {project.description}
               </p>
             </div>
 
             <div className="flex flex-col gap-10">
               <div>
-                <h3 className="text-3xl font-medium mb-5">/Techs</h3>
+                <h3 className="text-2xl md:text-3xl lg:text-4xl font-medium mb-3 lg:mb-6">
+                  /Techs
+                </h3>
                 <div className="flex flex-wrap gap-3">
                   {project.technologies.map((tech, index) => (
                     <Badge key={index}>{tech}</Badge>
@@ -65,7 +71,9 @@ const ProjectDetails = () => {
               </div>
 
               <div>
-                <h3 className="text-3xl font-medium mb-5">/Links</h3>
+                <h3 className="text-2xl md:text-3xl lg:text-4xl font-medium mb-3 lg:mb-6">
+                  /Links
+                </h3>
                 <div className="flex flex-col gap-4">
                   <Button
                     href={project.liveLink}
