@@ -1,22 +1,22 @@
 import { siteData } from "../constants";
-import { HashLink } from 'react-router-hash-link';
+import { HashLink } from "react-router-hash-link";
 
 const Contact = () => {
   return (
     <section
       id="contact"
-      className="h-[calc(100vh-72px)] w-full py-16 px-8  bg-black text-white"
+      className="min-h-[calc(100vh-72px)] w-full p-6 sm:p-8 pt-12 bg-black text-white flex flex-col"
     >
-      <div className="container mx-auto flex flex-col justify-between">
-        <div className="flex">
+      <div className="container mx-auto flex-1 flex flex-col justify-between gap-10 lg:gap-0">
+        <div className="flex flex-col sm:flex-row gap-10 sm:gap-0">
           <div className="flex-1">
-            <h2 className="text-5xl font-medium text-white mb-5">
+            <h2 className="text-4xl lg:text-5xl font-medium text-white mb-3 lg:mb-5">
               /Quick links
             </h2>
-            <ul>
+            <ul className="flex flex-col gap-2 text-xl lg:text-2xl text-black-400">
               {siteData.navLinks.map((link) => (
                 <li key={link.id}>
-                  <HashLink smooth to={`/#${link.id}`} className="text-4xl text-black-400">
+                  <HashLink smooth to={`/#${link.id}`}>
                     {link.title}
                   </HashLink>
                 </li>
@@ -24,41 +24,30 @@ const Contact = () => {
             </ul>
           </div>
           <div className="flex-1">
-            <h2 className="text-5xl font-medium text-white mb-5">
+            <h2 className="text-4xl lg:text-5xl font-medium text-white mb-3 lg:mb-5">
               {siteData.contactSection.heading}
             </h2>
-            <ul>
-              <li className="text-4xl text-black-400">
-                Email/{siteData.personalInfo.email}
-              </li>
-              <li className="text-4xl text-black-400">
-                Phone/{siteData.personalInfo.phone}
-              </li>
-              <li className="text-4xl text-black-400">
-                LinkedIn/{siteData.socialLinks.linkedin}
-              </li>
-              <li className="text-4xl text-black-400">
-                GitHub/{siteData.socialLinks.github}
-              </li>
-              <li className="text-4xl text-black-400">
-                Instagram/{siteData.socialLinks.instagram}
-              </li>
-              <li className="text-4xl text-black-400">
-                Twitter/{siteData.socialLinks.twitter}
-              </li>
+            <ul className="flex flex-col gap-2 text-xl lg:text-2xl text-black-400">
+              <li>Email/{siteData.personalInfo.email}</li>
+              <li>Phone/{siteData.personalInfo.phone}</li>
+              <li>LinkedIn/{siteData.socialLinks.linkedin}</li>
+              <li>GitHub/{siteData.socialLinks.github}</li>
+              <li>Instagram/{siteData.socialLinks.instagram}</li>
+              <li>Twitter/{siteData.socialLinks.twitter}</li>
             </ul>
           </div>
         </div>
         <div className="flex justify-between items-end">
-          <h1 className="text-9xl font-semibold">
+          <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-9xl font-semibold leading-[0.9]">
             {siteData.contactSection.sloganLines[0]}
             <br />
             {siteData.contactSection.sloganLines[1]}
           </h1>
           <HashLink
-          smooth
-          to="/#home"
-           className="w-12 h-12 rounded-full bg-white flex items-center justify-center text-black text-2xl">
+            smooth
+            to="/#home"
+            className="w-12 h-12 rounded-full bg-white flex items-center justify-center text-black text-2xl"
+          >
             <i className="fa-solid fa-caret-up"></i>
           </HashLink>
         </div>

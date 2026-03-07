@@ -11,25 +11,25 @@ const Button = ({
   to,
   ...props 
 }) => {
-  const baseStyles = "flex items-center justify-between group rounded-2xl transition-all duration-300 cursor-pointer gap-4";
+  const baseStyles = "flex items-center justify-between group rounded-2xl transition-all duration-300 cursor-pointer gap-4 text-center";
   
   const variants = {
-    black: "py-3 px-5 min-w-[200px] bg-black text-white hover:bg-black-800 border-2 border-transparent",
-    outline: "py-3 px-5 min-w-[200px] bg-transparent text-black border-2 border-black hover:bg-black hover:text-white",
-    white: "py-3 px-5 min-w-[200px] bg-black-100 text-black hover:bg-black-200 border-2 border-transparent",
+    black: "py-3 px-3 sm:px-5 min-w-[150px] bg-black text-white hover:bg-black-800 border-2 border-transparent",
+    outline: "py-3 px-3 sm:px-5 min-w-[150px] bg-transparent text-black border-2 border-black hover:bg-black hover:text-white",
+    white: "py-3 px-3 sm:px-5 min-w-[150px] bg-black-100 text-black hover:bg-black-200 border-2 border-transparent",
     text: "p-0 min-w-0 bg-transparent text-black hover:text-black-600"
   };
 
   const innerContent = (
     <>
       {leftIcon && (
-        <span className="flex items-center justify-center">
+        <span className="hidden sm:flex items-center justify-center">
           {leftIcon}
         </span>
       )}
-      <span className="text-2xl font-medium">{children}</span>
+      <span className="text-lg sm:text-2xl font-medium w-full">{children}</span>
       {icon && (
-        <span className="flex items-center justify-center">
+        <span className="hidden sm:flex items-center justify-center">
           {icon}
         </span>
       )}

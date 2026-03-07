@@ -3,6 +3,7 @@ import { useParams, Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Button from "../components/Button";
 import { projects } from "../constants";
+import Badge from "../components/Badge";
 
 const ProjectDetails = () => {
   const { id } = useParams();
@@ -58,12 +59,7 @@ const ProjectDetails = () => {
                 <h3 className="text-3xl font-medium mb-5">/Techs</h3>
                 <div className="flex flex-wrap gap-3">
                   {project.technologies.map((tech, index) => (
-                    <span
-                      key={index}
-                      className="h-10 px-5 rounded-full bg-black-200 text-black-700 font-medium text-xl flex items-center justify-center"
-                    >
-                      {tech}
-                    </span>
+                    <Badge key={index}>{tech}</Badge>
                   ))}
                 </div>
               </div>
@@ -76,7 +72,9 @@ const ProjectDetails = () => {
                     target="_blank"
                     rel="noreferrer"
                     variant="black"
-                    icon={<i className="fa-solid fa-arrow-up-right-from-square text-xl "></i>}
+                    icon={
+                      <i className="fa-solid fa-arrow-up-right-from-square text-xl "></i>
+                    }
                   >
                     Live Website
                   </Button>

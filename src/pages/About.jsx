@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import { useParams, Link } from "react-router-dom";
 import { siteData } from "../constants";
+import Badge from "../components/Badge";
 
 const About = () => {
   return (
@@ -43,12 +44,7 @@ const About = () => {
                 </h3>
                 <div className="flex flex-wrap gap-3">
                   {siteData.aboutPage.development.skills.map((skill, index) => (
-                    <span
-                      key={index}
-                      className="h-8 px-4 min-w-30 rounded-3xl bg-black-200 text-black-700 font-medium text-2xl text-center whitespace-nowrap flex py-4 items-center justify-center cursor-default hover:bg-black-300 transition-colors"
-                    >
-                      {skill}
-                    </span>
+                    <Badge key={index}>{skill}</Badge>
                   ))}
                 </div>
               </div>
@@ -59,12 +55,7 @@ const About = () => {
                 </h3>
                 <div className="flex flex-wrap gap-3">
                   {siteData.aboutPage.design.skills.map((skill, index) => (
-                    <span
-                      key={index}
-                      className="h-8 px-4 min-w-30 rounded-3xl bg-black-200 text-black-700 font-medium text-2xl text-center whitespace-nowrap flex py-4 items-center justify-center cursor-default hover:bg-black-300 transition-colors"
-                    >
-                      {skill}
-                    </span>
+                    <Badge key={index}>{skill}</Badge>
                   ))}
                 </div>
               </div>
@@ -76,12 +67,7 @@ const About = () => {
               </h3>
               <div className="flex flex-wrap gap-3">
                 {siteData.aboutPage.ai.skills.map((skill, index) => (
-                  <span
-                    key={index}
-                    className="h-8 px-4 min-w-30 rounded-3xl bg-black-200 text-black-700 font-medium text-2xl text-center whitespace-nowrap flex py-4 items-center justify-center cursor-default hover:bg-black-300 transition-colors"
-                  >
-                    {skill}
-                  </span>
+                  <Badge key={index}>{skill}</Badge>
                 ))}
               </div>
             </div>
