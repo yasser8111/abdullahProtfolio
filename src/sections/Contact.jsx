@@ -1,4 +1,5 @@
 import { siteData } from "../constants";
+import { HashLink } from 'react-router-hash-link';
 
 const Contact = () => {
   return (
@@ -15,9 +16,9 @@ const Contact = () => {
             <ul>
               {siteData.navLinks.map((link) => (
                 <li key={link.id}>
-                  <a href={`#${link.id}`} className="text-4xl text-black-400">
+                  <HashLink smooth to={`/#${link.id}`} className="text-4xl text-black-400">
                     {link.title}
-                  </a>
+                  </HashLink>
                 </li>
               ))}
             </ul>
@@ -54,11 +55,12 @@ const Contact = () => {
             <br />
             {siteData.contactSection.sloganLines[1]}
           </h1>
-          <a
-          href="#home"
-           className="w-20 h-20 rounded-full bg-white flex items-center justify-center text-black text-5xl">
-            <i class="fa-solid fa-angle-up"></i>
-          </a>
+          <HashLink
+          smooth
+          to="/#home"
+           className="w-12 h-12 rounded-full bg-white flex items-center justify-center text-black text-2xl">
+            <i className="fa-solid fa-caret-up"></i>
+          </HashLink>
         </div>
       </div>
     </section>

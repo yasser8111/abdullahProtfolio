@@ -1,23 +1,63 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Button = ({ 
   children, 
-  variant = "primary", 
-  className = "", 
+  variant = "black", 
+  className = "",
+  icon,
+  leftIcon,
+  href,
+  to,
   ...props 
 }) => {
-  const baseStyles = "text-2xl font-semibold px-8 py-3 rounded-3xl transition-all w-fit border-2 cursor-pointer";
+  const baseStyles = "flex items-center justify-between group rounded-2xl transition-all duration-300 cursor-pointer gap-4";
+  
   const variants = {
-    primary: "bg-black text-white border-black hover:bg-gray-800",
-    outline: "bg-transparent text-black border-black hover:bg-black hover:text-white"
+    black: "py-3 px-5 min-w-[200px] bg-black text-white hover:bg-black-800 border-2 border-transparent",
+    outline: "py-3 px-5 min-w-[200px] bg-transparent text-black border-2 border-black hover:bg-black hover:text-white",
+    white: "py-3 px-5 min-w-[200px] bg-black-100 text-black hover:bg-black-200 border-2 border-transparent",
+    text: "p-0 min-w-0 bg-transparent text-black hover:text-black-600"
   };
+
+  const innerContent = (
+    <>
+      {leftIcon && (
+        <span className="flex items-center justify-center">
+          {leftIcon}
+        </span>
+      )}
+      <span className="text-2xl font-medium">{children}</span>
+      {icon && (
+        <span className="flex items-center justify-center">
+          {icon}
+        </span>
+      )}
+    </>
+  );
+
+  if (to) {
+    return (
+      <Link to={to} className={`${baseStyles} ${variants[variant]} ${className}`} {...props}>
+        {innerContent}
+      </Link>
+    );
+  }
+
+  if (href) {
+    return (
+      <a href={href} className={`${baseStyles} ${variants[variant]} ${className}`} {...props}>
+        {innerContent}
+      </a>
+    );
+  }
 
   return (
     <button 
       className={`${baseStyles} ${variants[variant]} ${className}`}
       {...props}
     >
-      {children}
+      {innerContent}
     </button>
   );
 };

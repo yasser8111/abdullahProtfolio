@@ -1,4 +1,5 @@
 import React from "react";
+import { HashLink } from 'react-router-hash-link';
 
 const Navbar = () => {
   const mainLinks = [
@@ -12,22 +13,24 @@ const Navbar = () => {
       <div className="p-6  flex justify-between items-center container mx-auto">
         <div className="flex gap-5 items-center">
           {mainLinks.map((link) => (
-            <a
+            <HashLink
+              smooth
               key={link.name}
-              href={link.href}
+              to={"/" + link.href}
               className="text-slate-900 font-semibold tracking-wide hover:text-black-500 transition-colors"
             >
               {link.name}
-            </a>
+            </HashLink>
           ))}
         </div>
 
-        <a
-          href={contactLink.href}
+        <HashLink
+          smooth
+          to={"/" + contactLink.href}
           className="text-slate-900 font-semibold tracking-wide hover:text-black-500 transition-colors"
         >
           {contactLink.name}
-        </a>
+        </HashLink>
       </div>
     </div>
   );

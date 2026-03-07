@@ -57,6 +57,7 @@
     scroll-padding-top: 72px;
   }
 
+  .snap,
   section {
     scroll-snap-align: start;
     scroll-snap-stop: always;

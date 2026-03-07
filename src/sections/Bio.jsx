@@ -1,6 +1,6 @@
-import React from "react";
 import Button from "../components/Button";
 import { siteData } from "../constants";
+import { Link } from "react-router-dom";
 
 const Bio = () => {
   return (
@@ -21,14 +21,22 @@ const Bio = () => {
             </h3>
 
             <p className="text-2xl text-black-600">
-              {siteData.bioSection.description}
+              {siteData.bioSection.bio}
             </p>
 
-            <div className="flex gap-3">
-              <Button variant="primary">
+            <div className="flex gap-4 cursor-pointer">
+              <Button 
+                variant="black"
+                href="#"
+                icon={<i className="fa-solid fa-download text-xl"></i>}
+              >
                 {siteData.bioSection.buttons.resume}
               </Button>
-              <Button variant="outline">
+              <Button 
+                variant="outline"
+                to="/about"
+                icon={<i className="fa-regular fa-user text-xl"></i>}
+              >
                 {siteData.bioSection.buttons.about}
               </Button>
             </div>

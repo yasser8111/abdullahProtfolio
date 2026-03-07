@@ -1,48 +1,28 @@
-const projects = [
-  {
-    id: 1,
-    title: "Project 01",
-    category: "Web Application",
-  },
-  {
-    id: 2,
-    title: "Project 02",
-    category: "Mobile App",
-  },
-  {
-    id: 3,
-    title: "Project 03",
-    category: "Dashboard",
-  },
-  {
-    id: 4,
-    title: "Project 04",
-    category: "Landing Page",
-  },
-];
+import { Link } from "react-router-dom";
+import { projects } from "../constants";
 
 const ProjectCard = ({ project }) => {
   return (
-    <div className="cursor-pointer">
-      <div className="w-full h-100 rounded-[20px] overflow-hidden bg-black-200 transition-colors duration-300" />
+    <Link to={`/project/${project.id}`} className="block cursor-pointer group">
+      <div className="w-full h-100 rounded-[20px] overflow-hidden bg-black-200 transition-colors duration-300 relative">
+        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 z-10" />
+      </div>
       <div className="mt-4">
-        <h3 className="text-3xl font-semibold text-black-600">
+        <h3 className="text-3xl font-semibold text-black-600 group-hover:text-black transition-colors">
           {project.title}
         </h3>
         <div className="flex flex-wrap gap-3 mt-2">
           <span className="h-8 px-4 min-w-30 rounded-3xl bg-black-200 text-black-700 font-medium text-2xl text-center">
-            HTML5
+            {project.category}
           </span>
-          <span className="h-8 px-4 min-w-30 rounded-3xl bg-black-200 text-black-700 font-medium text-2xl text-center">
-            CSS3
-          </span>
-          <span className="h-8 px-4 min-w-30 rounded-3xl bg-black-200 text-black-700 font-medium text-2xl text-center">
-            JavaScript
-          </span>
-          
+          {project.technologies?.[0] && (
+            <span className="h-8 px-4 min-w-30 rounded-3xl bg-black-200 text-black-700 font-medium text-2xl text-center">
+              {project.technologies[0]}
+            </span>
+          )}
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 
