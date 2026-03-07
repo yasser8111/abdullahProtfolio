@@ -4,7 +4,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="container h-[calc(100vh-72px)] mx-auto my-16 p-4 md:p-6 lg:p-8 flex flex-col justify-between"
+      className="container h-[calc(100dvh-72px)] mx-auto my-16 p-4 md:p-6 lg:p-8 flex flex-col justify-between"
     >
       <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-bold">
         {siteData.heroSection.sloganLines[0]}

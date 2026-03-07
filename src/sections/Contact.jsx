@@ -5,7 +5,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="min-h-[calc(100vh-72px)] w-full p-6 sm:p-8 pt-12 bg-black text-white flex flex-col"
+      className="min-h-[calc(100dvh-72px)] w-full p-6 sm:p-8 pt-12 bg-black text-white flex flex-col"
     >
       <div className="container mx-auto flex-1 flex flex-col justify-between gap-10 lg:gap-0">
         <div className="flex flex-col sm:flex-row gap-10 sm:gap-0">

@@ -38,7 +38,7 @@ const Project = () => {
   return (
     <section
       id="work"
-      className="container min-h-[calc(100vh-72px)] mx-auto my-16 p-4 md:p-6 lg:p-8 flex flex-col justify-between"
+      className="container min-h-[calc(100dvh-72px)] mx-auto my-16 p-4 md:p-6 lg:p-8 flex flex-col justify-between"
     >
       <h2 className="text-4xl lg:text-5xl font-medium text-black-600">
         /Works
