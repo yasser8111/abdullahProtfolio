@@ -51,7 +51,7 @@ const ProjectDetails = () => {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 snap snap-center">
             <div className="md:col-span-2">
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-medium mb-3 lg:mb-6">
-                /Description
+                /Desc
               </h2>
               <p className="text-md :mdtext-xl lg:text-2xl text-black-600 font-light">
                 {project.description}
@@ -71,9 +71,6 @@ const ProjectDetails = () => {
               </div>
 
               <div>
-                <h3 className="text-2xl md:text-3xl lg:text-4xl font-medium mb-3 lg:mb-6">
-                  /Links
-                </h3>
                 <div className="flex flex-col gap-4">
                   <Button
                     href={project.liveLink}
