@@ -11,7 +11,7 @@ const Contact = () => {
         <div className="flex flex-col sm:flex-row gap-10 sm:gap-0">
           <div className="flex-1">
             <h2 className="text-4xl lg:text-5xl font-medium text-white mb-3 lg:mb-5">
-              /Links
+              {siteData.contactSection.links}
             </h2>
             <ul className="flex flex-col gap-2 text-xl lg:text-2xl text-black-400">
               {siteData.navLinks.map((link) => (
@@ -25,7 +25,7 @@ const Contact = () => {
           </div>
           <div className="flex-1">
             <h2 className="text-4xl lg:text-5xl font-medium text-white mb-3 lg:mb-5">
-              {siteData.contactSection.heading}
+              {siteData.contactSection.social}
             </h2>
             <ul className="flex flex-col gap-2 text-xl lg:text-2xl text-black-400">
               <li>Email/{siteData.personalInfo.email}</li>

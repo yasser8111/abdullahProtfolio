@@ -16,7 +16,7 @@ const About = () => {
           <i className="fa-solid fa-arrow-left"></i>
           Back to Home
         </Link>
-        
+
         <h2 className="text-4xl lg:text-5xl font-medium text-black-600 mb-3 lg:mb-6">
           {siteData.aboutPage.heading}
         </h2>
@@ -85,9 +85,7 @@ const About = () => {
               <div
                 key={index}
                 className="group p-8 rounded-2xl bg-black-100 hover:bg-black-200 transition-all h-[35vh]"
-              >
-                
-              </div>
+              ></div>
             ))}
           </div>
         </div>

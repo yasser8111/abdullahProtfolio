@@ -1,66 +1,82 @@
 export const siteData = {
   personalInfo: {
-    name: "Yasser",
-    email: "yasser@gmail.com",
-    phone: "123-456-789",
+    name: "Yaser Tareq",
+    email: "yasserxd653@gmail.com",
+    phone: "+967739770762",
   },
+
   socialLinks: {
-    linkedin: "yasser",
-    github: "yasser",
-    instagram: "yasser",
-    twitter: "yasser",
+    linkedin: "yaser-tareq",
+    github: "yasser8111",
+    instagram: "yaser.tareq",
+    twitter: "yaser_tareq",
   },
+
   contactSection: {
     heading: "/Contact",
-    sloganLines: ["Clean code.", "Smart design."],
+    links: "/Links",
+    social: "/Social",
+    sloganLines: ["Let's build something", "great together."],
   },
+
   heroSection: {
     sloganLines: ["Clean code.", "Smart design."],
     descriptions: [
-      "Frontend Developer focused on user-friendly web experiences.",
-      "Frontend Developer focused on building fast and user-friendly web experiences.",
+      "I build modern websites focused on performance, user experience, and clean design.",
+      "Computer Science student and frontend developer.",
     ],
-    year: "2025",
-    designerCredit: "Design by yasser",
+    year: "2026",
+    designerCredit: "Design by Yaser Tareq",
   },
+
   bioSection: {
     heading: "/Bio",
-    greeting: "Hi i'm Yasser",
-    bio: "First-year Computer Science student passionate about web development and UI/UX design. I focus on creating modern, clean interfaces and building websites using up-to-date technologies to improve performance, usability, and overall product quality.",
+    greeting: "Hi, I'm Yaser",
+    bio: "I am a Computer Science student and a frontend developer passionate about building modern websites and designing clean user interfaces. I focus on writing maintainable code, improving user experience, and using modern web technologies to build fast and scalable digital products.",
     buttons: {
       resume: "Download Resume",
       about: "About Me",
     },
   },
+
   navLinks: [
     { id: "home", title: "Home" },
     { id: "bio", title: "Bio" },
     { id: "work", title: "Work" },
     { id: "contact", title: "Contact" },
   ],
+
   aboutPage: {
     heading: "/About Me",
-    greeting: "HI I'm Yasser Tariq Al-Nahdi",
+
+    greeting: "Hi I'm Yaser Tareq",
+
     paragraphs: [
-      "I am a first-year Computer Science student with a strong passion for building websites and designing user experiences. I enjoy turning ideas into clean, modern, and functional digital products.",
-      "My approach to development is simple: focus on clarity, performance, and user experience. I believe that a good website is not only about how it looks, but also about how it works and how easily users can interact with it.",
-      "I like to combine design and development, creating interfaces that are visually appealing while remaining practical and efficient. I am always exploring new technologies and modern design trends to improve the quality of the projects I build.",
+      "I am a Computer Science student who enjoys building websites and creating modern digital experiences. My goal is to combine design and development to produce websites that are both visually appealing and technically strong.",
+
+      "I specialize in frontend development using modern technologies such as HTML, CSS, JavaScript, and React. I also focus on writing clean, maintainable code and building responsive interfaces that work smoothly across all devices.",
+
+      "Beyond web development, I am also exploring artificial intelligence tools, automation systems, and modern development workflows to improve productivity and build smarter applications.",
     ],
+
     skillsHeading: "/Skills",
+
     development: {
       title: "Development",
       skills: [
-        "JavaScript (ES6+)",
         "HTML5",
         "CSS3",
+        "JavaScript (ES6+)",
         "React.js",
         "Responsive Design",
         "Tailwind CSS",
-        "Git & GitHub",
         "REST APIs",
         "Firebase",
+        "Git & GitHub",
+        "Vercel",
       ],
     },
+
     design: {
       title: "Design",
       skills: [
@@ -71,10 +87,10 @@ export const siteData = {
         "Prototyping",
         "Typography",
         "Design Systems",
-        "User Research",
         "Color Theory",
       ],
     },
+
     ai: {
       title: "AI & Tools",
       skills: [
@@ -86,9 +102,6 @@ export const siteData = {
         "OpenAI API",
         "AI Integration",
         "AI Agents",
-        "AI Chatbots",
-        "Vector Databases",
-        "Embeddings",
         "GitHub Copilot",
         "Ollama",
         "Local LLM Setup",
@@ -96,85 +109,59 @@ export const siteData = {
         "Docker",
         "n8n",
         "Make (Integromat)",
-        "Zapier",
         "Automation Workflows",
         "API Integration",
-        "AI Assisted Development",
       ],
     },
+
     certificates: {
       title: "/Certificates",
-      list: [
-        {
-          name: "Advance AI Agent with n8n",
-          issuer: "Building AI Agents",
-          year: "2024",
-          link: "#",
-        },
-        {
-          name: "Prompt Engineering Specialization",
-          issuer: "DeepLearning.AI",
-          year: "2024",
-          link: "#",
-        },
-        {
-          name: "The Full Stack Web Development",
-          issuer: "Udemy",
-          year: "2024",
-          link: "#",
-        },
-      ],
+      list: [],
     },
+  },
+
+  worksSection: {
+    title: "/Works",
   },
 };
 
 export const projects = [
   {
     id: 1,
-    title: "Project 01",
-    category: "Web Application",
+    title: "Next Store",
+    category: "E-commerce Website",
     description:
-      "A comprehensive web application designed to streamline business workflows. Built with modern web technologies focusing on performance and user experience.",
+      "An electronics e-commerce website built with HTML, CSS, and JavaScript. The store focuses on modern design, fast loading performance, and a simple product ordering system.",
     image:
       "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2072&auto=format&fit=crop",
-    technologies: ["HTML5", "CSS3", "JavaScript", "React", "Node.js"],
+    technologies: ["HTML", "CSS", "JavaScript"],
     liveLink: "#",
-    githubLink: "#",
+    githubLink: "https://github.com/yasser8111",
   },
+
   {
     id: 2,
-    title: "Project 02",
-    category: "Mobile App",
+    title: "Portfolio Website",
+    category: "Personal Portfolio",
     description:
-      "A cross-platform mobile application providing seamless features on the go. Focuses on intuitive UI and fast interactions.",
+      "A modern portfolio website designed to showcase projects, skills, and experience. Built with React and focused on smooth UI interactions and clean design.",
     image:
       "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=2070&auto=format&fit=crop",
-    technologies: ["React Native", "Firebase", "Redux"],
+    technologies: ["React", "Tailwind CSS", "JavaScript"],
     liveLink: "#",
-    githubLink: "#",
+    githubLink: "https://github.com/yasser8111",
   },
+
   {
     id: 3,
-    title: "Project 03",
-    category: "Dashboard",
+    title: "YasserGPT",
+    category: "AI Application",
     description:
-      "An analytical dashboard providing real-time data insights and beautiful visualizations for business intelligence.",
+      "An AI chat system designed to provide intelligent responses and manage conversations with multiple users. Built as part of the YaserGPT project.",
     image:
       "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop",
-    technologies: ["Vue.js", "D3.js", "Tailwind CSS"],
-    liveLink: "#",
-    githubLink: "#",
-  },
-  {
-    id: 4,
-    title: "Project 04",
-    category: "Landing Page",
-    description:
-      "A high-conversion landing page designed to capture leads and showcase product features with stunning animations.",
-    image:
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop",
-    technologies: ["HTML5", "CSS3", "JavaScript", "Framer Motion"],
-    liveLink: "#",
-    githubLink: "#",
+    technologies: ["JavaScript", "API Integration", "AI"],
+    liveLink: "https://yassergpt811.vercel.app",
+    githubLink: "https://github.com/yasser8111/YasserGPT",
   },
 ];

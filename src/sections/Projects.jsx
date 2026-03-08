@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { projects } from "../constants";
+import { projects, siteData } from "../constants";
 import Badge from "../components/Badge";
 
 const ProjectCard = ({ project }) => {
@@ -41,7 +41,7 @@ const Project = () => {
       className="container min-h-[calc(100dvh-72px)] mx-auto my-16 p-4 md:p-6 lg:p-8 flex flex-col justify-between"
     >
       <h2 className="text-4xl lg:text-5xl font-medium text-black-600">
-        /Works
+        {siteData.worksSection.title}
       </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10 mt-5 sm:mt-10">
