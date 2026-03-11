@@ -1,5 +1,5 @@
 import Button from "../components/Button";
-import { siteData } from "../constants";
+import { siteData } from "../constants/index";
 import { Link } from "react-router-dom";
 
 const Bio = () => {
@@ -27,8 +27,8 @@ const Bio = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-end lg:justify-start">
               <Button
                 variant="black"
-                href="#"
-                icon={<i className="fa-solid fa-download text-xl"></i>}
+                to="/#work"
+                icon={<i className="fa-solid fa-arrow-right -rotate-45"></i>}
               >
                 {siteData.bioSection.buttons.resume}
               </Button>

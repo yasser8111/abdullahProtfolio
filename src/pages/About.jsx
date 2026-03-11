@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import { useParams, Link } from "react-router-dom";
-import { siteData } from "../constants";
+import { siteData } from "../constants/index";
 import Badge from "../components/Badge";
 
 const About = () => {
@@ -13,7 +13,7 @@ const About = () => {
           to="/"
           className="inline-flex items-center gap-2 text-xl lg:text-2xl font-medium text-black-600 hover:text-black mb-4 lg:mb-10 transition-colors snap"
         >
-          <i className="fa-solid fa-arrow-left"></i>
+          <i className="fa-solid fa-angle-left"></i>
           Back to Home
         </Link>
 
@@ -75,7 +75,7 @@ const About = () => {
           </div>
         </div>
 
-        <div className="mt-12 lg:mt-24">
+        {/* <div className="mt-12 lg:mt-24">
           <h2 className="text-4xl lg:text-5xl font-medium text-black-600 mb-3 lg:mb-6 snap">
             {siteData.aboutPage.certificates.title}
           </h2>
@@ -88,7 +88,7 @@ const About = () => {
               ></div>
             ))}
           </div>
-        </div>
+        </div> */}
       </div>
     </>
   );

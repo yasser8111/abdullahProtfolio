@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { projects, siteData } from "../constants";
+import { projects, siteData } from "../constants/index";
 import Badge from "../components/Badge";
 
 const ProjectCard = ({ project }) => {
@@ -9,9 +9,8 @@ const ProjectCard = ({ project }) => {
         <img
           src={project.image}
           alt={project.title}
-          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+          className="w-full h-full object-cover transition-all duration-700 grayscale group-hover:grayscale-0 group-hover:scale-105"
         />
-        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-500 z-10" />
       </div>
       <div className="mt-2 md:mt-4 lg:mt-6 space-y-3">
         <h3 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-black-800 group-hover:text-black transition-colors tracking-tight">

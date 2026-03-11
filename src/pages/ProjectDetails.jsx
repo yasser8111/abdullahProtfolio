@@ -2,7 +2,7 @@ import React from "react";
 import { useParams, Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Button from "../components/Button";
-import { projects } from "../constants";
+import { projects } from "../constants/index";
 import Badge from "../components/Badge";
 
 const ProjectDetails = () => {
@@ -27,7 +27,7 @@ const ProjectDetails = () => {
             to="/"
             className="inline-flex items-center gap-2 text-xl lg:text-2xl font-medium text-black-600 hover:text-black mb-4 lg:mb-10 transition-colors snap"
           >
-            <i className="fa-solid fa-arrow-left"></i>
+            <i className="fa-solid fa-angle-left"></i>
             Back to Home
           </Link>
 

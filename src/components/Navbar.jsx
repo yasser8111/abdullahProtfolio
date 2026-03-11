@@ -1,12 +1,10 @@
 import React from "react";
-import { HashLink } from 'react-router-hash-link';
+import { HashLink } from "react-router-hash-link";
+import { siteData } from "../constants/index";
 
 const Navbar = () => {
-  const mainLinks = [
-    { name: "BIO", href: "#bio" },
-    { name: "WORK", href: "#work" },
-  ];
-  const contactLink = { name: "CONTACT", href: "#contact" };
+  const mainLinks = siteData.links.nav.slice(0, 2);
+  const contactLink = siteData.links.nav[2];
 
   return (
     <div className="w-full fixed bg-white top-0 z-50">
@@ -15,21 +13,21 @@ const Navbar = () => {
           {mainLinks.map((link) => (
             <HashLink
               smooth
-              key={link.name}
-              to={"/" + link.href}
+              key={link.id}
+              to={"/#" + link.id}
               className="text-slate-900 font-semibold tracking-wide hover:text-black-500 transition-colors"
             >
-              {link.name}
+              {link.title}
             </HashLink>
           ))}
         </div>
 
         <HashLink
           smooth
-          to={"/" + contactLink.href}
+          to={"/#" + contactLink.id}
           className="text-slate-900 font-semibold tracking-wide hover:text-black-500 transition-colors"
         >
-          {contactLink.name}
+          {contactLink.title}
         </HashLink>
       </div>
     </div>

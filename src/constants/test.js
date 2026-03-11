@@ -1,17 +1,15 @@
-import Contact from "../sections/Contact";
-
 export const siteData = {
   personalInfo: {
-    name: "Abdullah brishan",
-    email: "abdullahbrishan.dev@gmail.com",
-    phone: "+967774401320",
+    name: "Yaser Tareq",
+    email: "yasserxd653@gmail.com",
+    phone: "+967739770762",
   },
 
   socialLinks: {
+    linkedin: "yaser-tareq",
     github: "yasser8111",
-    instagram: "bn_khaled24",
+    instagram: "yaser.tareq",
     twitter: "yaser_tareq",
-    linkedin: "yasser8111",
   },
 
   contactSection: {
@@ -22,45 +20,36 @@ export const siteData = {
   },
 
   heroSection: {
-    sloganLines: ["Design fast &", "Build faster."],
-    descriptions:
-      "I build websites like Tetris — placing every piece perfectly until everything fits.",
+    sloganLines: ["Clean code.", "Smart design."],
+    descriptions: [
+      "I build modern websites focused on performance, user experience, and clean design.",
+      "Computer Science student and frontend developer.",
+    ],
+    year: "2026",
+    designerCredit: "Design by Yaser Tareq",
   },
 
   bioSection: {
     heading: "/Bio",
-    greeting: "Hi, I'm Abdullah",
-    bio: "Computer Science student, UI/UX designer and frontend developer passionate about building modern websites and designing clean user interfaces. I focus on writing maintainable code, improving user experience, and using modern web technologies to build fast and scalable digital products.",
+    greeting: "Hi, I'm Yaser",
+    bio: "I am a Computer Science student and a frontend developer passionate about building modern websites and designing clean user interfaces. I focus on writing maintainable code, improving user experience, and using modern web technologies to build fast and scalable digital products.",
     buttons: {
-      resume: "Show my works",
+      resume: "Download Resume",
       about: "About Me",
     },
   },
 
-  // navLinks: [
-  //   { id: "bio", title: "BIO" },
-  //   { id: "work", title: "WORK" },
-  //   { id: "contact", title: "CONTACT" },
-  // ],
-  links: {
-    nav: [
-      { id: "bio", title: "BIO" },
-      { id: "work", title: "WORK" },
-      { id: "contact", title: "CONTACT" },
-    ],
-    contact: [
-      { id: "hero", title: "Home" },
-      { id: "bio", title: "Bio" },
-      { id: "About", title: "About" },
-      { id: "work", title: "Work" },
-      { id: "contact", title: "Contact" },
-    ],
-  },
+  navLinks: [
+    { id: "home", title: "Home" },
+    { id: "bio", title: "Bio" },
+    { id: "work", title: "Work" },
+    { id: "contact", title: "Contact" },
+  ],
 
   aboutPage: {
     heading: "/About Me",
 
-    greeting: "Hi I'm Abdullah Brishan",
+    greeting: "Hi I'm Yaser Tareq",
 
     paragraphs: [
       "I am a Computer Science student who enjoys building websites and creating modern digital experiences. My goal is to combine design and development to produce websites that are both visually appealing and technically strong.",
@@ -79,6 +68,10 @@ export const siteData = {
         "CSS3",
         "JavaScript (ES6+)",
         "React.js",
+        "Responsive Design",
+        "Tailwind CSS",
+        "REST APIs",
+        "Firebase",
         "Git & GitHub",
         "Vercel",
       ],
@@ -107,14 +100,23 @@ export const siteData = {
         "Gemini",
         "Google AI Studio",
         "OpenAI API",
+        "AI Integration",
+        "AI Agents",
+        "GitHub Copilot",
+        "Ollama",
+        "Local LLM Setup",
+        "Hugging Face",
+        "Docker",
+        "n8n",
+        "Make (Integromat)",
+        "Automation Workflows",
+        "API Integration",
       ],
     },
 
     certificates: {
       title: "/Certificates",
-      list: [
-        // مختبر تصميم الألعاب الثقافية
-      ],
+      list: [],
     },
   },
 
@@ -131,7 +133,7 @@ export const projects = [
     description:
       "An electronics e-commerce website built with HTML, CSS, and JavaScript. The store focuses on modern design, fast loading performance, and a simple product ordering system.",
     image:
-      "/imges/Auth.png",
+      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2072&auto=format&fit=crop",
     technologies: ["HTML", "CSS", "JavaScript"],
     liveLink: "#",
     githubLink: "https://github.com/yasser8111",
@@ -144,7 +146,7 @@ export const projects = [
     description:
       "A modern portfolio website designed to showcase projects, skills, and experience. Built with React and focused on smooth UI interactions and clean design.",
     image:
-      "/imges/Dashboard.png",
+      "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=2070&auto=format&fit=crop",
     technologies: ["React", "Tailwind CSS", "JavaScript"],
     liveLink: "#",
     githubLink: "https://github.com/yasser8111",
@@ -157,7 +159,7 @@ export const projects = [
     description:
       "An AI chat system designed to provide intelligent responses and manage conversations with multiple users. Built as part of the YaserGPT project.",
     image:
-      "/imges/Design.jpg",
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop",
     technologies: ["JavaScript", "API Integration", "AI"],
     liveLink: "https://yassergpt811.vercel.app",
     githubLink: "https://github.com/yasser8111/YasserGPT",

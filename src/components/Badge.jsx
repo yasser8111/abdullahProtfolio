@@ -2,7 +2,7 @@ import React from "react";
 
 const Badge = ({ children, className = "" }) => {
   return (
-    <span 
+    <span
       className={`
         inline-flex items-center justify-center 
         px-5 py-1.5 
