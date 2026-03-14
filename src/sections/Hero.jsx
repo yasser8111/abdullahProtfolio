@@ -18,7 +18,7 @@ const Hero = () => {
           {siteData.heroSection.descriptions}
         </p>
 
-        <div className="flex flex-wrap gap-4 mt-6">
+        <div className="flex flex-wrap gap-4 flex-col sm:flex-row">
           <Button to="/#work" variant="black">
             {siteData.bioSection.buttons.resume}
           </Button>
@@ -32,7 +32,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="flex justify-center items-center">
+      <div className="flex justify-center items-center  mt-6">
         <img
           src="/imges/hero-imge.svg"
           alt="Hero"
