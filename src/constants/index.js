@@ -117,15 +117,15 @@ export const siteData = {
 export const projects = [
   {
     id: 1,
-    title: "Next Store",
-    category: "E-commerce Website",
+    title: "Airtiqa Center",
+    category: "Webapplcation",
     description:
-      "An electronics e-commerce website built with HTML, CSS, and JavaScript. The store focuses on modern design, fast loading performance, and a simple product ordering system.",
+      "A modern, bilingual web platform for Airtiqa University Center — empowering students through ethics, knowledge, and community.",
     image:
       "/imges/project-1.png",
-    technologies: ["HTML", "CSS", "JavaScript"],
-    liveLink: "#",
-    githubLink: "https://github.com/yasser8111",
+    technologies: ["React", "tailwindcssCSS", "JavaScript","vite", "vercel"],
+    liveLink: "https://github.com/yasser8111/Airtqa",
+    githubLink: "https://airtiqa.vercel.app/",
   },
 
   {

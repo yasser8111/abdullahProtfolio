@@ -40,7 +40,7 @@ const ProjectDetails = () => {
             </p>
           </div>
 
-          <div className="w-full h-[50vh] md:h-[70vh] rounded-[30px] overflow-hidden mb-4 md:mb-8 lg:mb-16 bg-black-100 snap">
+          <div className="w-full h-[50vh] md:h-[70vh] rounded-[30px] overflow-hidden mb-4 md:mb-8 lg:mb-16 bg-black-100 border-2 border-black-200 snap">
             <img
               src={project.image}
               alt={project.title}
