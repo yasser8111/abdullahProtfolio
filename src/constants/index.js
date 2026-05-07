@@ -122,7 +122,7 @@ export const projects = [
     description:
       "An electronics e-commerce website built with HTML, CSS, and JavaScript. The store focuses on modern design, fast loading performance, and a simple product ordering system.",
     image:
-      "/imges/Auth.png",
+      "/imges/project-1.png",
     technologies: ["HTML", "CSS", "JavaScript"],
     liveLink: "#",
     githubLink: "https://github.com/yasser8111",
