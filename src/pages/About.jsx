@@ -74,21 +74,6 @@ const About = () => {
             </div>
           </div>
         </div>
-
-        {/* <div className="mt-12 lg:mt-24">
-          <h2 className="text-4xl lg:text-5xl font-medium text-black-600 mb-3 lg:mb-6 snap">
-            {siteData.aboutPage.certificates.title}
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {siteData.aboutPage.certificates.list.map((cert, index) => (
-              <div
-                key={index}
-                className="group p-8 rounded-2xl bg-black-100 hover:bg-black-200 transition-all h-[35vh]"
-              ></div>
-            ))}
-          </div>
-        </div> */}
       </div>
     </>
   );

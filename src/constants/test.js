@@ -113,11 +113,6 @@ export const siteData = {
         "API Integration",
       ],
     },
-
-    certificates: {
-      title: "/Certificates",
-      list: [],
-    },
   },
 
   worksSection: {

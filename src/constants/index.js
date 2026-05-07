@@ -107,13 +107,6 @@ export const siteData = {
         "OpenAI API",
       ],
     },
-
-    certificates: {
-      title: "/Certificates",
-      list: [
-        // مختبر تصميم الألعاب الثقافية
-      ],
-    },
   },
 
   worksSection: {
