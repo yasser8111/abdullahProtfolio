@@ -5,7 +5,7 @@ import Badge from "../components/Badge";
 const ProjectCard = ({ project }) => {
   return (
     <Link to={`/project/${project.id}`} className="block cursor-pointer group">
-      <div className="w-full aspect-video rounded-2xl lg:rounded-3xl overflow-hidden bg-black-100 transition-all duration-500 relative">
+      <div className="w-full aspect-video rounded-2xl lg:rounded-3xl overflow-hidden bg-black-100 border-2 border-black-200 transition-all duration-500 relative">
         <img
           src={project.image}
           alt={project.title}
