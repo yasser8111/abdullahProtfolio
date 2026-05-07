@@ -40,12 +40,14 @@ const ProjectDetails = () => {
             </p>
           </div>
 
-          <div className="w-full h-[50vh] md:h-[70vh] rounded-[30px] overflow-hidden mb-4 md:mb-8 lg:mb-16 bg-black-100 border-2 border-black-200 snap">
-            <img
-              src={project.image}
-              alt={project.title}
-              className="w-full h-full object-cover"
-            />
+          <div className="[perspective:1200px] w-full">
+            <div className="w-full h-[50vh] md:h-[70vh] rounded-[30px] overflow-hidden mb-4 md:mb-8 lg:mb-16 bg-black-100 border-2 border-black-200 snap [transform:rotateX(12deg)] origin-bottom shadow-[0_20px_50px_rgba(0,0,0,0.15)] transition-transform duration-500 hover:[transform:rotateX(6deg)]">
+              <img
+                src={project.image}
+                alt={project.title}
+                className="w-full h-full object-cover"
+              />
+            </div>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 snap snap-center">
