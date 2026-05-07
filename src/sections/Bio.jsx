@@ -15,7 +15,7 @@ const Bio = () => {
         <div className="flex flex-col lg:flex-row lg:gap-10 max-w-7xl mx-auto items-center">
           <div className="w-full lg:w-1/2 relative mt-5">
             <img
-              className="w-full h-[400px] sm:h-[480px] lg:h-[520px] object-cover rounded-3xl"
+              className="w-full h-[400px] sm:h-[480px] lg:h-[520px] object-cover rounded-3xl border-2 border-black-200"
               src="/imges/me.jpeg"
               alt="Abdullah Brishan"
             />
