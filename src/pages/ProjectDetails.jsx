@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useParams, Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Button from "../components/Button";
@@ -8,6 +8,27 @@ import Badge from "../components/Badge";
 const ProjectDetails = () => {
   const { id } = useParams();
   const project = projects.find((p) => p.id === parseInt(id));
+
+  const containerRef = useRef(null);
+  const [rotateX, setRotateX] = useState(12);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!containerRef.current) return;
+      const rect = containerRef.current.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+      
+      // Starts straightening at 50% height and becomes 0 at the top
+      const startScrollY = windowHeight * 0.5;
+      const progress = Math.max(0, Math.min(1, (rect.top - 100) / startScrollY));
+      
+      setRotateX(progress * 12);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   if (!project) {
     return (
@@ -41,7 +62,11 @@ const ProjectDetails = () => {
           </div>
 
           <div className="[perspective:1200px] w-full">
-            <div className="w-full h-[50vh] md:h-[70vh] rounded-[30px] overflow-hidden mb-4 md:mb-8 lg:mb-16 bg-black-100 border-2 border-black-200 snap [transform:rotateX(12deg)] origin-bottom shadow-[0_20px_50px_rgba(0,0,0,0.15)] transition-transform duration-500 hover:[transform:rotateX(6deg)]">
+            <div
+              ref={containerRef}
+              style={{ transform: `rotateX(${rotateX}deg)` }}
+              className="w-full h-[50vh] md:h-[70vh] rounded-[30px] overflow-hidden mb-4 md:mb-8 lg:mb-16 bg-black-100 border-2 border-black-200 snap origin-bottom shadow-[0_10px_30px_rgba(0,0,0,0.06)] transition-all duration-300 ease-out"
+            >
               <img
                 src={project.image}
                 alt={project.title}
