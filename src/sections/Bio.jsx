@@ -1,6 +1,5 @@
 import Button from "../components/Button";
 import { siteData } from "../constants/index";
-import { Link } from "react-router-dom";
 
 const Bio = () => {
   return (
@@ -14,7 +13,13 @@ const Bio = () => {
 
       <div className="flex-1 flex flex-col justify-center snap-center mt-5">
         <div className="flex flex-col lg:flex-row lg:gap-10 max-w-7xl mx-auto items-center">
-          <div className="w-full lg:w-1/2 h-100 rounded-3xl bg-black-100"></div>
+          <div className="w-full lg:w-1/2 relative mt-5">
+            <img
+              className="w-full h-[400px] sm:h-[480px] lg:h-[520px] object-cover rounded-3xl"
+              src="/imges/me.jpeg"
+              alt="Abdullah Brishan"
+            />
+          </div>
           <div className="w-full lg:w-1/2 flex flex-col gap-4 mt-5">
             <h3 className="text-3xl md:text-4xl lg:text-5xl font-medium">
               {siteData.bioSection.greeting}

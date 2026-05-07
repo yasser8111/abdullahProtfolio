@@ -1,6 +1,34 @@
 import { siteData } from "../constants";
 import { HashLink } from "react-router-hash-link";
 
+const platformConfigs = {
+  instagram: {
+    label: "Instagram",
+    icon: "fa-brands fa-instagram w-8",
+    urlPrefix: "https://instagram.com/",
+  },
+  facebook: {
+    label: "Facebook",
+    icon: "fa-brands fa-facebook w-8",
+    urlPrefix: "https://facebook.com/",
+  },
+  linkedin: {
+    label: "LinkedIn",
+    icon: "fa-brands fa-linkedin w-8",
+    urlPrefix: "https://linkedin.com/in/",
+  },
+  github: {
+    label: "GitHub",
+    icon: "fa-brands fa-github w-8",
+    urlPrefix: "https://github.com/",
+  },
+  twitter: {
+    label: "Twitter",
+    icon: "fa-brands fa-x-twitter w-8",
+    urlPrefix: "https://twitter.com/",
+  },
+};
+
 const Contact = () => {
   return (
     <section
@@ -50,50 +78,26 @@ const Contact = () => {
                   <span>{siteData.personalInfo.phone}</span>
                 </a>
               </li>
-              <li>
-                <a
-                  href={`https://linkedin.com/in/${siteData.socialLinks.linkedin}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-3 hover:text-white transition-colors"
-                >
-                  <i className="fa-brands fa-linkedin w-8"></i>
-                  <span>LinkedIn</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href={`https://github.com/${siteData.socialLinks.github}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-3 hover:text-white transition-colors"
-                >
-                  <i className="fa-brands fa-github w-8"></i>
-                  <span>GitHub</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href={`https://instagram.com/${siteData.socialLinks.instagram}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-3 hover:text-white transition-colors"
-                >
-                  <i className="fa-brands fa-instagram w-8"></i>
-                  <span>Instagram</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href={`https://twitter.com/${siteData.socialLinks.twitter}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-3 hover:text-white transition-colors"
-                >
-                  <i className="fa-brands fa-x-twitter w-8"></i>
-                  <span>Twitter</span>
-                </a>
-              </li>
+              {Object.entries(siteData.socialLinks).map(([platform, username]) => {
+                const config = platformConfigs[platform];
+                if (!username || !config) return null;
+                const href = username.startsWith("http://") || username.startsWith("https://")
+                  ? username
+                  : `${config.urlPrefix}${username}`;
+                return (
+                  <li key={platform}>
+                    <a
+                      href={href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-3 hover:text-white transition-colors"
+                    >
+                      <i className={config.icon}></i>
+                      <span>{config.label}</span>
+                    </a>
+                  </li>
+                );
+              })}
             </ul>
           </div>
         </div>

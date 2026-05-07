@@ -8,13 +8,13 @@ const Hero = () => {
       className="container min-h-[calc(100dvh-72px)] mx-auto my-16 p-4 md:p-6 lg:p-8 grid grid-cols-1 lg:grid-cols-[800px_1fr]"
     >
       <div className="flex flex-col justify-center gap-4">
-        <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-bold leading-tight">
+        <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-bold">
           {siteData.heroSection.sloganLines[0]}
           <br />
           {siteData.heroSection.sloganLines[1]}
         </h1>
 
-        <p className="text-lg lg:text-3xl text-black-400 max-w-[700px]">
+        <p className="text-lg lg:text-3xl text-black-400 max-w-[700px] mb-16">
           {siteData.heroSection.descriptions}
         </p>
 

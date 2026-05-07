@@ -8,10 +8,8 @@ export const siteData = {
   },
 
   socialLinks: {
-    github: "yasser8111",
     instagram: "bn_khaled24",
-    twitter: "yaser_tareq",
-    linkedin: "yasser8111",
+    facebook: "https://www.facebook.com/share/1FmFdauG8s/"
   },
 
   contactSection: {
@@ -148,18 +146,5 @@ export const projects = [
     technologies: ["React", "Tailwind CSS", "JavaScript"],
     liveLink: "#",
     githubLink: "https://github.com/yasser8111",
-  },
-
-  {
-    id: 3,
-    title: "YasserGPT",
-    category: "AI Application",
-    description:
-      "An AI chat system designed to provide intelligent responses and manage conversations with multiple users. Built as part of the YaserGPT project.",
-    image:
-      "/imges/Design.jpg",
-    technologies: ["JavaScript", "API Integration", "AI"],
-    liveLink: "https://yassergpt811.vercel.app",
-    githubLink: "https://github.com/yasser8111/YasserGPT",
-  },
+  }
 ];
